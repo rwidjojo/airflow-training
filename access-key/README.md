@@ -11,7 +11,8 @@
  ip-172-31-16-15.ap-southeast-1.compute.internal
 
 
-#SSH - Access
+# SSH - Access
 use pmi-key-pair.pem if want to access PMI instance
+
 ## example
 ssh -i pmi-key-pair.pem root@54.169.179.151
