@@ -14,5 +14,8 @@
 # SSH - Access
 use pmi-key-pair.pem if want to access PMI instance
 
+## access key
+update permission file before use. Example chmod 600 pmi-key-pair.pem
+
 ## example
-ssh -i pmi-key-pair.pem root@54.169.179.151
+ssh -i pmi-key-pair.pem ubuntu@54.169.179.151
