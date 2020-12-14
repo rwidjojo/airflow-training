@@ -13,7 +13,7 @@ This is a curated list of resources about [Apache Airflow](https://airflow.apach
 5. Setup Development Environments
 6. Simple Pipeline
 7. Run Pipeline
-8. DAG Logs
+8. Update Delete
 9. Retry and Backfilling
 10. Operators
 11. Pools
