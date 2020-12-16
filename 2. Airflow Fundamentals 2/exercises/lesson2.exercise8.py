@@ -1,0 +1,84 @@
+#
+# Instructions:
+# Summary result from addition_task, division_task and subtraction_task
+
+
+import datetime
+import logging
+
+from airflow import DAG
+from airflow.operators.python_operator import PythonOperator
+
+
+def hello_world():
+    logging.info("Hello World")
+
+
+def addition():
+    result = 2+2
+    logging.info(f"2 + 2 = {result}")
+    return result
+
+
+def subtraction():
+    result = 6-2
+    logging.info(f"6 -2 = {result}")
+    return result
+
+
+def division():
+    result = int(10/2)
+    logging.info(f"10 / 2 = {result}")
+    return result
+ 
+def completed_task(**kwargs):
+    ti = kwargs['ti']
+    ## Pull xcom here 
+    summary = ....  # calculate xcom result here
+    logging.info(f"Summary from all task is {summary}")
+
+
+owner = 'john_doe' # Replace with your short name
+
+default_args = {
+    'owner': owner,
+    'depends_on_past': False,
+    'start_date': days_ago(2),
+}
+
+dag = DAG(
+    f'{owner}.lesson2.excercise4',
+    default_args=default_args,
+)
+
+hello_world_task = PythonOperator(
+    task_id="hello_world",
+    python_callable=hello_world,
+    dag=dag,
+)
+
+addition_task = PythonOperator(
+    task_id="addition",
+    python_callable=addition,
+    dag=dag,
+)
+
+subraction_task = PythonOperator(
+    task_id="subtraction",
+    python_callable=subtraction,
+    dag=dag,
+)
+
+division_task = PythonOperator(
+    task_id="division",
+    python_callable=division,
+    dag=dag,
+)
+
+completed_task = PythonOperator(
+    task_id="completed_task",
+    python_callable=completed_task,
+    dag=dag,
+)
+
+hello_world_task >> [addition_task, subraction_task, division_task] >> completed_task
