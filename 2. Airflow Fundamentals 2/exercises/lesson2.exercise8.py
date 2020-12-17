@@ -79,6 +79,7 @@ division_task = PythonOperator(
 completed_task = PythonOperator(
     task_id="completed_task",
     python_callable=completed_task,
+    provide_context=True,
     dag=dag,
 )
 
