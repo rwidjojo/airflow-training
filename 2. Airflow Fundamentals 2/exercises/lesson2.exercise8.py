@@ -8,6 +8,7 @@ import logging
 
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
+from airflow.utils.dates import days_ago
 
 
 def hello_world():
@@ -47,7 +48,7 @@ default_args = {
 }
 
 dag = DAG(
-    f'{owner}.lesson2.excercise4',
+    f'{owner}.lesson2.excercise8',
     default_args=default_args,
 )
 
@@ -63,7 +64,7 @@ addition_task = PythonOperator(
     dag=dag,
 )
 
-subraction_task = PythonOperator(
+subtraction_task = PythonOperator(
     task_id="subtraction",
     python_callable=subtraction,
     dag=dag,
