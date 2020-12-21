@@ -51,11 +51,11 @@ def write_to_log():
   logging.info(...)
 ```
 
-Don't forget function `write_to_log` has argument `write_to_log`:
+Don't forget function `write_to_log` has argument `log_to_write`:
 
 ```python
-def write_to_log(write_to_log):
-  logging.info(write_to_log)
+def write_to_log(log_to_write):
+  logging.info(log_to_write)
 ```
 
 or we could define it like this:
@@ -89,7 +89,7 @@ dag = DAG(
     default_args=default_args,
 )
 
-def write_to_log(write_to_log):
+def write_to_log(log_to_write):
   logging.info(write_to_log)
 
 greet_task = PythonOperator(
