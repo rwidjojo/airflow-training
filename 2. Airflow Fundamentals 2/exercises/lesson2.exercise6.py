@@ -41,8 +41,8 @@ addition_task = PythonOperator(
     dag=dag,
 )
 
-subraction_task = PythonOperator(
-    task_id="subraction_task",
+subtraction_task = PythonOperator(
+    task_id="subtraction_task",
     python_callable=calculator,
     op_kwargs={}, # fill argument subraction calculation here
     dag=dag,
@@ -62,6 +62,4 @@ division_task = PythonOperator(
     dag=dag,
 )
 
-addition_task >> subraction_task >> multiplication_task >> division_task
-
-
+addition_task >> subtraction_task >> multiplication_task >> division_task
