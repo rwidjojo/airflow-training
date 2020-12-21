@@ -24,7 +24,7 @@ t1 = S3KeySensor(
     poke_interval=0,
     timeout=10,
     soft_fail=True,
-    bucket_key='s3://dev.canopydata.com/airflow/example_qubole_operator.py',
+    bucket_key='s3://pmi-airflow/santa.jpg',
     bucket_name=None,
     dag=dag)
 
