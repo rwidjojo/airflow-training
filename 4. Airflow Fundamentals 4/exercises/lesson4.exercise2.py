@@ -18,7 +18,7 @@ default_args = {
 }
 
 dag = DAG(
-    f'{owner}.lesson4.excercise1',
+    f'{owner}.lesson4.excercise2',
     default_args=default_args,
     description='Read data from postgresql',
     schedule_interval=None,
