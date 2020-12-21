@@ -17,7 +17,7 @@ TEST_DAG_ID = 'unit_test_sql_dag'
 class TestSqlSensor(TestHiveEnvironment):
     def setUp(self):
         super().setUp()
-        args = {'owner': 'airflow', 'start_date': DEFAULT_DATE}
+        args = {'owner': 'rezaprimasatya', 'start_date': DEFAULT_DATE}
         self.dag = DAG(TEST_DAG_ID, default_args=args)
 
     def test_unsupported_conn_type(self):

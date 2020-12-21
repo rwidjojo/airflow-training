@@ -41,7 +41,7 @@ class TestBaseSensor(unittest.TestCase):
         db.clear_db_xcom()
 
     def setUp(self):
-        args = {'owner': 'airflow', 'start_date': DEFAULT_DATE}
+        args = {'owner': 'rezaprimasatya', 'start_date': DEFAULT_DATE}
         self.dag = DAG(TEST_DAG_ID, default_args=args)
         self.clean_db()
 
@@ -531,7 +531,7 @@ class DummyPokeOnlySensor(BaseSensorOperator):
 class TestPokeModeOnly(unittest.TestCase):
     def setUp(self):
         self.dagbag = DagBag(dag_folder=DEV_NULL, include_examples=True)
-        self.args = {'owner': 'airflow', 'start_date': DEFAULT_DATE}
+        self.args = {'owner': 'rezaprimasatya', 'start_date': DEFAULT_DATE}
         self.dag = DAG(TEST_DAG_ID, default_args=self.args)
 
     def test_poke_mode_only_allows_poke_mode(self):

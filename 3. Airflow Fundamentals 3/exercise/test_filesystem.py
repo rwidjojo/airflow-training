@@ -17,7 +17,7 @@ class TestFileSensor(unittest.TestCase):
         from airflow.hooks.filesystem import FSHook
 
         hook = FSHook()
-        args = {'owner': 'airflow', 'start_date': DEFAULT_DATE}
+        args = {'owner': 'rezaprimasatya', 'start_date': DEFAULT_DATE}
         dag = DAG(TEST_DAG_ID + 'test_schedule_dag_once', default_args=args)
         self.hook = hook
         self.dag = dag

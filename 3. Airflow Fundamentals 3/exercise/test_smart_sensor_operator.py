@@ -52,7 +52,7 @@ class SmartSensorTest(unittest.TestCase):
         os.environ['AIRFLOW__SMART_SENSER__USE_SMART_SENSOR'] = 'true'
         os.environ['AIRFLOW__SMART_SENSER__SENSORS_ENABLED'] = 'DummySmartSensor'
 
-        args = {'owner': 'airflow', 'start_date': DEFAULT_DATE}
+        args = {'owner': 'rezaprimasatya', 'start_date': DEFAULT_DATE}
         self.dag = DAG(TEST_DAG_ID, default_args=args)
         self.sensor_dag = DAG(TEST_SENSOR_DAG_ID, default_args=args)
         self.log = logging.getLogger('BaseSmartTest')

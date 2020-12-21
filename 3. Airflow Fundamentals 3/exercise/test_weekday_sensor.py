@@ -26,7 +26,7 @@ class TestDayOfWeekSensor(unittest.TestCase):
     def setUp(self):
         self.clean_db()
         self.dagbag = DagBag(dag_folder=DEV_NULL, include_examples=True)
-        self.args = {'owner': 'airflow', 'start_date': DEFAULT_DATE}
+        self.args = {'owner': 'rezaprimasatya', 'start_date': DEFAULT_DATE}
         dag = DAG(TEST_DAG_ID, default_args=self.args)
         self.dag = dag
 

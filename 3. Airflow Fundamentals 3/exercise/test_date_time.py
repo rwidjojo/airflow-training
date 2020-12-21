@@ -13,7 +13,7 @@ DEFAULT_DATE = timezone.datetime(2015, 1, 1)
 class TestDateTimeSensor:
     @classmethod
     def setup_class(cls):
-        args = {"owner": "airflow", "start_date": DEFAULT_DATE}
+        args = {"owner": "rezaprimasatya", "start_date": DEFAULT_DATE}
         cls.dag = DAG("test_dag", default_args=args)
 
     @parameterized.expand(

@@ -8,7 +8,7 @@ from airflow.sensors.bash import BashSensor
 
 class TestBashSensor(unittest.TestCase):
     def setUp(self):
-        args = {'owner': 'airflow', 'start_date': datetime.datetime(2017, 1, 1)}
+        args = {'owner': 'rezaprimasatya', 'start_date': datetime.datetime(2017, 1, 1)}
         dag = DAG('test_dag_id', default_args=args)
         self.dag = dag
 
