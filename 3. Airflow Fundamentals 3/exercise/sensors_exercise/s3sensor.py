@@ -24,7 +24,11 @@ t1 = S3KeySensor(
     poke_interval=0,
     timeout=10,
     soft_fail=True,
+<<<<<<< HEAD
     bucket_key='s3://dev.canopydata.com/airflow/example_qubole_operator.py',
+=======
+    bucket_key='s3://pmi-airflow/santa.jpg',
+>>>>>>> c87be4f809d1ff5163b4fa3f5b074807852ead79
     bucket_name=None,
     dag=dag)
 
@@ -44,4 +48,8 @@ t3 = BashOperator(
 
 t2.set_upstream(t1)
 t3.set_upstream(t1)
+<<<<<<< HEAD
 t3.set_upstream(t2)
+=======
+t3.set_upstream(t2)
+>>>>>>> c87be4f809d1ff5163b4fa3f5b074807852ead79

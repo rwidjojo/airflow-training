@@ -28,8 +28,10 @@ dag = DAG(
 
 wait_oltp_file = FileSensor(
     task_id="wait_oltp_file",
-    filepath="lesson3.exercise4.sql",
+    filepath="/home/ubuntu/airflow/dags/john_doe/lesson3.exercise4.sql",
     dag=dag,
+    poke_interval=30,
+    timeout=3600
 )
 
 write_to_postgres = PostgresOperator(
