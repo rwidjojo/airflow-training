@@ -103,7 +103,7 @@ services:
   grafana:
     container_name: grafana
     image: grafana/grafana
-    volumes:
-      - ./grafana.ini:/etc/grafana/grafana.ini
+    # volumes:
+    #   - ./grafana.ini:/etc/grafana/grafana.ini
     ports:
       - "3000:3000"
